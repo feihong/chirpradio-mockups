@@ -1,0 +1,10 @@
+h1 {
+  font-size: 2em;
+}
+div.actions {
+  display: flex;
+  flex-direction: column;
+}
+div.actions a {
+  margin-bottom: 1em;
+}
