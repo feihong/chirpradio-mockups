@@ -1,0 +1,18 @@
+title: CHIRP Radio Command Center
+actions:
+- See new artists; new-artists
+- Update artist whitelist; update-artist-whitelist
+- See new music files; new-music
+- Import new music files; import-music
+- Generate Tracktor file; traktor
+- Upload new data to DJDB; upload
+
+===
+extend base.html
+
+p Welcome! What would you like to do?
+
+div.actions
+  - buttons = [item.split('; ') for item in actions]
+  - for label, link in buttons
+    a(href=link, class='btn')= label
