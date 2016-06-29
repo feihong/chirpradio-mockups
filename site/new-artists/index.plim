@@ -1,0 +1,10 @@
+title: See new artists
+
+===
+
+-inherit command.plim
+
+-block header
+  p This command will show you what artists are (supposedly) not yet in the database.
+
+  button.btn.btn-primary Stop

@@ -1,0 +1,20 @@
+title: CHIRPRADIO Command Center
+button_pairs:
+- new-artists/ See new artists
+- update-artist-whitelist/ Update artist whitelist
+- new-music-files/ See new music files
+- import-music/ Import new music files
+- generate-traktor/ Generate Traktor file
+- upload/ Upload new data to DJDB
+===
+
+-inherit base.plim
+
+p Welcome! What would you like to do?
+
+-def button(label, url)
+  a.btn.btn-primary.btn-block.btn-lg href=url = label
+
+.well style='max-width:500px'
+  -for url, label in (p.split(' ', 1) for p in button_pairs)
+    =button(label, url)
