@@ -19,3 +19,6 @@ main {
   overflow-y: scroll;
   margin-bottom: 1em;
 }
+button {
+  margin-right: 1em;
+}
