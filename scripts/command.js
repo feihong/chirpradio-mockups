@@ -6,6 +6,18 @@
     });
   };
 
+  window.speak = function(text) {
+    if (window.speechSynthesis === void 0) {
+      return;
+    }
+    return new Promise(function(resolve, reject) {
+      var utterance;
+      utterance = new SpeechSynthesisUtterance(text);
+      window.speechSynthesis.speak(utterance);
+      return utterance.onend = resolve;
+    });
+  };
+
   window.plog = function(text) {
     var output, p;
     output = $('.console');

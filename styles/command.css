@@ -17,4 +17,5 @@ main {
   color: #90ee90;
   font-family: monospace;
   overflow-y: scroll;
+  margin-bottom: 1em;
 }
