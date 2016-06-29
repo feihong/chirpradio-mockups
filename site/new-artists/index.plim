@@ -7,4 +7,6 @@ title: See new artists
 -block header
   p This command will show you what artists are (supposedly) not yet in the database.
 
+  button.btn.btn-primary.disabled.start Start
   button.btn.btn-primary.stop Stop
+  button.btn.btn-primary.disabled.next Next
