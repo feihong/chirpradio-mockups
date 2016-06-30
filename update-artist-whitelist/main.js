@@ -12,7 +12,7 @@
     $('.start').addClass('disabled');
     return co(function*() {
       var i, j, mesg;
-      for (i = j = 1; j <= 30; i = ++j) {
+      for (i = j = 1; j <= 10; i = ++j) {
         if (running) {
           pinfo("Artist " + i);
           (yield sleep(0.3));
@@ -20,10 +20,9 @@
           return;
         }
       }
-      mesg = 'Found 30 new artists!';
-      completed = true;
-      pinfo(mesg);
-      (yield playSound('success'));
+      mesg = 'Encountered unexpected error!';
+      perr(mesg);
+      (yield playSound('failure'));
       (yield speak(mesg));
       return stop();
     });

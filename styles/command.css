@@ -10,15 +10,35 @@ body {
 header {
   padding-bottom: 1em;
 }
-main {
+main.console {
   flex: 1;
-  padding: 1em;
   background-color: #000;
   color: #90ee90;
   font-family: monospace;
   overflow-y: scroll;
+  padding-top: 1em;
+  padding-bottom: 1em;
   margin-bottom: 1em;
+}
+main.console p {
+  padding: 0em 1em;
+  margin-bottom: 0.2em;
+}
+main.console p.error {
+  background-color: #dc143c;
+  color: #fff;
+}
+main.console p.highlight {
+  background-color: #ffd700;
+  color: #2f4f4f;
 }
 button {
   margin-right: 1em;
+}
+.hbox {
+  display: flex;
+  flex-direction: row;
+}
+div.spacer {
+  flex: 1;
 }
