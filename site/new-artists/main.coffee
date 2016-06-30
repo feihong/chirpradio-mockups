@@ -1,4 +1,5 @@
 running = null
+completed = false
 
 
 start = () ->
@@ -14,23 +15,26 @@ start = () ->
         return
 
     mesg = 'Found 30 new artists!'
+    completed = true
     plog mesg
     speak mesg
     stop()
   )
 
-stop = () ->
+
+stop = (manual) ->
   running = false
 
   co(() ->
-    plog 'Stopping...'
-    yield sleep 1
-    plog 'Stopped!'
+    if manual
+      plog 'Stopping...'
+      yield sleep 1
+      plog 'Stopped!'
     $('button.stop').addClass('disabled')
     $('button.start').removeClass('disabled')
+    if completed
+      $('button.next').removeClass('disabled')
   )
-
-
 
 
 $('button.start').on 'click', () ->
@@ -40,7 +44,7 @@ $('button.start').on 'click', () ->
 
 $('button.stop').on 'click', () ->
   if running
-    stop()
+    stop(true)
 
 
 start()
