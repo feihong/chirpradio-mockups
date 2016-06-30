@@ -32,13 +32,19 @@ main.console p.highlight {
   background-color: #ffd700;
   color: #2f4f4f;
 }
-button {
+header button {
   margin-right: 1em;
 }
-.hbox {
+header .hbox {
   display: flex;
   flex-direction: row;
 }
-div.spacer {
+header div.spacer {
+  flex: 1;
+}
+header .percent {
+  width: 3em;
+}
+header progress {
   flex: 1;
 }

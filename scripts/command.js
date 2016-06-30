@@ -12,7 +12,7 @@
 
   window.speak = function(text) {
     if (window.speechSynthesis === void 0) {
-      return;
+      return Promise.resolve();
     }
     return new Promise(function(resolve, reject) {
       var utterance;
