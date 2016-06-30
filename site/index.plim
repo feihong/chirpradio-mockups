@@ -10,6 +10,8 @@ button_pairs:
 
 -inherit base.plim
 
+h1 = title
+
 p Welcome! What would you like to do?
 
 -def button(label, url)

@@ -12,6 +12,13 @@
 
 
 header
+  ol.breadcrumb
+      li
+        a href='${BASE}' Home
+      li.active = title
+
+  h1 = title
+
   -block header
 
 main.console
