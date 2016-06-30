@@ -9,14 +9,14 @@ start = () ->
   co(() ->
     for i in [1..30]
       if running
-        plog "Artist #{i}"
+        pinfo "Artist #{i}"
         yield sleep 0.3
       else
         return
 
     mesg = 'Found 30 new artists!'
     completed = true
-    plog mesg
+    pinfo mesg
     speak mesg
     stop()
   )
@@ -27,9 +27,9 @@ stop = (manual) ->
 
   co(() ->
     if manual
-      plog 'Stopping...'
+      pinfo 'Stopping...'
       yield sleep 1
-      plog 'Stopped!'
+      pinfo 'Stopped!'
     $('.stop').addClass('disabled')
     $('.start').removeClass('disabled')
     if completed

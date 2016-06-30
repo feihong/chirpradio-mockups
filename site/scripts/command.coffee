@@ -12,8 +12,19 @@ window.speak = (text) ->
     utterance.onend = resolve
   )
 
-window.plog = (text) ->
+
+plog = (text, cls) ->
   output = $('.console')
   p = $('<p>').text(text).appendTo(output)
+  if cls
+    p.addClass(cls)
   # Make output scroll to the bottom.
   output.scrollTop(p.offset().top - output.offset().top + output.scrollTop())
+
+
+window.pinfo = (text) ->
+  plog text
+
+
+window.perr = (text) ->
+  plog text, 'error'

@@ -4,19 +4,18 @@ completed = false
 
 start = () ->
   running = true
-  $('button.stop').removeClass('disabled')
-  $('button.start').addClass('disabled')
+  $('.stop').removeClass('disabled')
+  $('.start').addClass('disabled')
   co(() ->
-    for i in [1..30]
+    for i in [1..10]
       if running
-        plog "Artist #{i}"
+        pinfo "Artist #{i}"
         yield sleep 0.3
       else
         return
 
-    mesg = 'Found 30 new artists!'
-    completed = true
-    plog mesg
+    mesg = 'Encountered unexpected error!'
+    perr mesg
     speak mesg
     stop()
   )
@@ -27,22 +26,22 @@ stop = (manual) ->
 
   co(() ->
     if manual
-      plog 'Stopping...'
+      pinfo 'Stopping...'
       yield sleep 1
-      plog 'Stopped!'
-    $('button.stop').addClass('disabled')
-    $('button.start').removeClass('disabled')
+      pinfo 'Stopped!'
+    $('.stop').addClass('disabled')
+    $('.start').removeClass('disabled')
     if completed
-      $('button.next').removeClass('disabled')
+      $('.next').removeClass('disabled')
   )
 
 
-$('button.start').on 'click', () ->
+$('.start').on 'click', () ->
   if not running
     start()
 
 
-$('button.stop').on 'click', () ->
+$('.stop').on 'click', () ->
   if running
     stop(true)
 
