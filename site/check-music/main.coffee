@@ -8,16 +8,20 @@ start = () ->
   $('.start').addClass('disabled')
   co(() ->
     for i in [1..3]
-      phigh "Album #{i}"
+      albumMsg = "Album #{i}"
+      phigh albumMsg
       for j in [1..10]
-        if i == 1 and j == 3 or i == 2 and j == 8 or i == 3 and j == 5
-          perr "Track #{j} - something blew up"
+        if i == 2 and j == 3 or i == 3 and j == 7
+          trackMsg = "Track #{j} - something blew up"
+          perr trackMsg
+          $('.error-container').show()
+          $('<li>').text("#{albumMsg}: #{trackMsg}").appendTo('.errors')
           playSound 'error'
         else
           pinfo "Track #{j}"
         yield sleep 0.3
 
-    mesg = 'Encountered 3 errors'
+    mesg = 'Encountered 2 errors'
     perr mesg
     yield playSound 'failure'
     yield speak mesg
