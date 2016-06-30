@@ -9,5 +9,5 @@ title: Import new music files
     This command will import new music files.
 
 -block next
-  a.btn.btn-primary.disabled.next href='../generate-traktor'
+  a.btn.btn-primary.disabled.next href='../generate-traktor/'
     Next: Generate Traktor file

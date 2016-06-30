@@ -1,0 +1,13 @@
+title: Generate Traktor file
+
+===
+
+-inherit command.plim
+
+-block desc
+  -md
+    This command will generate the NML file for Traktor.
+
+-block next
+  a.btn.btn-primary.disabled.next href='../upload'
+    Next: Upload new data to DJDB
