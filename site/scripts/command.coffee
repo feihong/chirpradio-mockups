@@ -9,7 +9,8 @@ window.sleep = (delay) ->
 
 window.speak = (text) ->
   if window.speechSynthesis == undefined
-    return
+    return Promise.resolve()
+
   return new Promise((resolve, reject) ->
     utterance = new SpeechSynthesisUtterance(text)
     window.speechSynthesis.speak(utterance)

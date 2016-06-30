@@ -4,14 +4,15 @@ total = 1000
 
 start = () ->
   running = true
-  
+
   $('.stop').removeClass('disabled')
   $('.start').addClass('disabled')
   co(() ->
     for i in [1..total]
       if running
         percent = i / total * 100
-        $('.percent').text("#{percent}%")
+        $('.percent').text("#{percent.toFixed(0)}%")
+        $('.progress-bar').css('width', "#{percent}%")
         pinfo "Track #{i}"
         yield sleep 0.005
       else
