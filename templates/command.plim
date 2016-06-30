@@ -7,6 +7,8 @@
 -block scripts
   =parent.scripts()
   script src='https://cdnjs.cloudflare.com/ajax/libs/co/4.1.0/index.min.js'
+  script src='${BASE}scripts/jsfx.js'
+  script src='${BASE}scripts/sfxlib.js'
   =script(BASE + 'scripts/command.coffee')
   =script('main.coffee')
 

@@ -12,13 +12,15 @@ start = () ->
       for j in [1..10]
         if i == 1 and j == 3 or i == 2 and j == 8 or i == 3 and j == 5
           perr "Track #{j} - something blew up"
+          playSound 'error'
         else
           pinfo "Track #{j}"
         yield sleep 0.3
 
     mesg = 'Encountered 3 errors'
     perr mesg
-    speak mesg
+    yield playSound 'failure'
+    yield speak mesg
     stop()
   )
 

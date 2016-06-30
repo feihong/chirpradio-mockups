@@ -16,7 +16,8 @@ start = () ->
 
     mesg = 'Encountered unexpected error!'
     perr mesg
-    speak mesg
+    yield playSound 'failure'
+    yield speak mesg
     stop()
   )
 
