@@ -1,9 +1,6 @@
-running = null
-completed = false
-
+errorCount = 0
 
 start = () ->
-  running = true
   $('.stop').removeClass('disabled')
   $('.start').addClass('disabled')
   co(() ->
@@ -14,7 +11,8 @@ start = () ->
         if i == 2 and j == 3 or i == 3 and j == 7
           trackMsg = "Track #{j} - something blew up"
           perr trackMsg
-          $('.error-container').show()
+          errorCount += 1
+          $('.show-errors').show().text("Show errors (#{errorCount})")
           $('<li>').text("#{albumMsg}: #{trackMsg}").appendTo('.errors')
           playSound 'error'
         else
@@ -30,28 +28,10 @@ start = () ->
 
 
 stop = (manual) ->
-  running = false
-
   co(() ->
-    if manual
-      pinfo 'Stopping...'
-      yield sleep 1
-      pinfo 'Stopped!'
     $('.stop').addClass('disabled')
     $('.start').removeClass('disabled')
-    if completed
-      $('.next').removeClass('disabled')
   )
-
-
-$('.start').on 'click', () ->
-  if not running
-    start()
-
-
-$('.stop').on 'click', () ->
-  if running
-    stop(true)
 
 
 start()

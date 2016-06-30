@@ -30,4 +30,5 @@ header
       a.btn.btn-primary.disabled.next href='#' Next
 
 main.console
-  -block main
+
+-block modal
