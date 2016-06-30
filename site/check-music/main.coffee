@@ -10,7 +10,7 @@ start = () ->
     for i in [1..3]
       phigh "Album #{i}"
       for j in [1..10]
-        if j == 3
+        if i == 1 and j == 3 or i == 2 and j == 8 or i == 3 and j == 5
           perr "Track #{j} - something blew up"
         else
           pinfo "Track #{j}"
