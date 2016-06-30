@@ -12,7 +12,7 @@ start = () ->
       if running
         percent = i / total * 100
         $('.percent').text("#{percent.toFixed(0)}%")
-        $('.progress-bar').css('width', "#{percent}%")
+        $('progress').val(percent)
         pinfo "Track #{i}"
         yield sleep 0.005
       else
