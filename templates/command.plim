@@ -10,7 +10,6 @@
   =script(BASE + 'scripts/command.coffee')
   =script('main.coffee')
 
-
 header
   ol.breadcrumb
       li
@@ -19,7 +18,14 @@ header
 
   h1 = title
 
-  -block header
+  -block desc
+
+  .hbox
+    button.btn.btn-primary.disabled.start Start
+    button.btn.btn-primary.stop Stop
+    div.spacer
+    -block next
+      a.btn.btn-primary.disabled.next href='#' Next
 
 main.console
   -block main

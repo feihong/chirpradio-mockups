@@ -4,9 +4,9 @@ title: See new artists
 
 -inherit command.plim
 
--block header
+-block desc
   p This command will show you what artists are (supposedly) not yet in the database.
 
-  button.btn.btn-primary.disabled.start Start
-  button.btn.btn-primary.stop Stop
-  button.btn.btn-primary.disabled.next Next
+-block next
+  a.btn.btn-primary.disabled.next href='../update-artist-whitelist'
+    Next: Update artist whitelist

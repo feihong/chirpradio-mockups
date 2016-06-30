@@ -1,0 +1,13 @@
+title: Update artist whitelist
+
+===
+
+-inherit command.plim
+
+-block header
+  -md
+    This command will update the [artist whitelist file](https://github.com/chirpradio/chirpradio-machine/blob/master/chirp/library/data/artist-whitelist).
+
+  button.btn.btn-primary.disabled.start Start
+  button.btn.btn-primary.stop Stop
+  button.btn.btn-primary.disabled.next Next

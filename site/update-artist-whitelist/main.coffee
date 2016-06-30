@@ -4,8 +4,8 @@ completed = false
 
 start = () ->
   running = true
-  $('.stop').removeClass('disabled')
-  $('.start').addClass('disabled')
+  $('button.stop').removeClass('disabled')
+  $('button.start').addClass('disabled')
   co(() ->
     for i in [1..30]
       if running
@@ -30,19 +30,19 @@ stop = (manual) ->
       plog 'Stopping...'
       yield sleep 1
       plog 'Stopped!'
-    $('.stop').addClass('disabled')
-    $('.start').removeClass('disabled')
+    $('button.stop').addClass('disabled')
+    $('button.start').removeClass('disabled')
     if completed
-      $('.next').removeClass('disabled')
+      $('button.next').removeClass('disabled')
   )
 
 
-$('.start').on 'click', () ->
+$('button.start').on 'click', () ->
   if not running
     start()
 
 
-$('.stop').on 'click', () ->
+$('button.stop').on 'click', () ->
   if running
     stop(true)
 
