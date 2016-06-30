@@ -10,13 +10,13 @@ start = () ->
     for i in [1..30]
       if running
         pinfo "Artist #{i}"
-        yield sleep 0.3
+        yield sleep 0.2
       else
         return
 
     mesg = 'Found 30 new artists!'
     completed = true
-    pinfo mesg
+    phigh mesg
     yield playSound 'success'
     yield speak mesg
     stop()
