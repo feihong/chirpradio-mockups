@@ -2,7 +2,7 @@ title: CHIRPRADIO Command Center
 button_pairs:
 - new-artists/ See new artists
 - update-artist-whitelist/ Update artist whitelist
-- new-music-files/ See new music files
+- check-music/ Check new music files
 - import-music/ Import new music files
 - generate-traktor/ Generate Traktor file
 - upload/ Upload new data to DJDB

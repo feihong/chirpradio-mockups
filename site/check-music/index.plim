@@ -1,4 +1,4 @@
-title: Update artist whitelist
+title: Check new music files
 
 ===
 
@@ -9,5 +9,5 @@ title: Update artist whitelist
     This command will update the [artist whitelist file](https://github.com/chirpradio/chirpradio-machine/blob/master/chirp/library/data/artist-whitelist).
 
 -block next
-  a.btn.btn-primary.disabled.next href='../check-music'
-    Next: Check new music files
+  a.btn.btn-primary.disabled.next href='../import-music'
+    Next: Import new music files

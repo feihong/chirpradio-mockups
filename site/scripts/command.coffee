@@ -28,3 +28,7 @@ window.pinfo = (text) ->
 
 window.perr = (text) ->
   plog text, 'error'
+
+
+window.phigh = (text) ->
+  plog text, 'highlight'

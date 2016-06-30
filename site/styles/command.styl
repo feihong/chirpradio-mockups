@@ -10,14 +10,24 @@ body
 header
   padding-bottom 1em
 
-main
+main.console
   flex 1
-  padding 1em
   background-color black
   color lightgreen
   font-family monospace
   overflow-y scroll
   margin-bottom 1em
+
+  p
+    padding 0em 1em
+    margin-bottom 0.2em
+
+    &.error
+      color salmon
+
+    &.highlight
+      background-color gold
+      color darkslategray
 
 button
   margin-right 1em
@@ -28,7 +38,3 @@ button
 
 div.spacer
   flex 1
-
-.console
-  p.error
-    color salmon
