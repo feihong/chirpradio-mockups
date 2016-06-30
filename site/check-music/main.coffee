@@ -8,13 +8,15 @@ start = () ->
   $('.start').addClass('disabled')
   co(() ->
     for i in [1..3]
-      if running
-        phigh "Album #{i}"
+      phigh "Album #{i}"
+      for j in [1..10]
+        if j == 3
+          perr "Track #{j} - something blew up"
+        else
+          pinfo "Track #{j}"
         yield sleep 0.3
-      else
-        return
 
-    mesg = 'Encountered 2 errors!'
+    mesg = 'Encountered 3 errors'
     perr mesg
     speak mesg
     stop()
