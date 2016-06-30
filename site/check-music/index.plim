@@ -9,22 +9,9 @@ title: Check new music files
     This command will update the [artist whitelist file](https://github.com/chirpradio/chirpradio-machine/blob/master/chirp/library/data/artist-whitelist).
 
 -block next
-  button.btn.btn-primary.show-errors(
-    style='display:none'
-    data-toggle='modal'
-    data-target='#error-modal')
+  button.btn.btn-primary.show-errors(style='display:none'
+                                     data-toggle='modal'
+                                     data-target='#error-modal')
     Show errors
   a.btn.btn-primary.disabled.next href='../import-music'
     Next: Import new music files
-
--block modal
-  #error-modal.modal class='fade'
-    .modal-dialog
-      .modal-content
-        .modal-header
-          button.close data-dismiss='modal' &times;
-          h4.modal-title Errors
-        .modal-body
-          ul.errors
-        .modal-footer
-          button.btn.btn-default data-dismiss='modal' Close

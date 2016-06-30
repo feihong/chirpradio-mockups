@@ -28,10 +28,8 @@ start = () ->
 
 
 stop = (manual) ->
-  co(() ->
-    $('.stop').addClass('disabled')
-    $('.start').removeClass('disabled')
-  )
+  $('.stop').addClass('disabled')
+  $('.start').removeClass('disabled')
 
 
 start()

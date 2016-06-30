@@ -31,4 +31,13 @@ header
 
 main.console
 
--block modal
+#error-modal.modal class='fade'
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close data-dismiss='modal' &times;
+        h4.modal-title Errors
+      .modal-body
+        ul.errors
+      .modal-footer
+        button.btn.btn-default data-dismiss='modal' Close
