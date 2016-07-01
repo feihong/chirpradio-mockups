@@ -22,7 +22,7 @@
       }
       mesg = 'Found 30 new artists!';
       completed = true;
-      phigh(mesg);
+      psuccess(mesg);
       (yield playSound('success'));
       (yield speak(mesg));
       return stop();

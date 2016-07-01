@@ -25,8 +25,8 @@
           return;
         }
       }
-      mesg = 'Generated NML file with 1000 tracks';
-      phigh(mesg);
+      mesg = 'Generated NML file containing 1000 tracks';
+      psuccess(mesg);
       (yield playSound('success'));
       (yield speak(mesg));
       return stop();

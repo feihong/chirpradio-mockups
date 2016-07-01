@@ -16,7 +16,7 @@
         }
       }
       mesg = 'Successfully imported 30 tracks';
-      phigh(mesg);
+      psuccess(mesg);
       (yield playSound('success'));
       (yield speak(mesg));
       return stop();

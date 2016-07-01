@@ -51,4 +51,8 @@
     return plog(text, 'highlight');
   };
 
+  window.psuccess = function(text) {
+    return plog(text, 'success');
+  };
+
 }).call(this);
