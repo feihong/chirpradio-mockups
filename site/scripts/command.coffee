@@ -44,3 +44,7 @@ window.perr = (text) ->
 
 window.phigh = (text) ->
   plog text, 'highlight'
+
+
+window.psuccess = (text) ->
+  plog text, 'success'

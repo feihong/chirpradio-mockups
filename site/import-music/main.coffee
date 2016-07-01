@@ -10,7 +10,7 @@ start = () ->
           yield sleep 0.2
 
     mesg = 'Successfully imported 30 tracks'
-    phigh mesg
+    psuccess mesg
     yield playSound 'success'
     yield speak mesg
     stop()
