@@ -21,6 +21,7 @@ start = () ->
       else
         return
 
+    completed = true
     mesg = 'Generated NML file containing 1000 tracks'
     psuccess mesg
     yield playSound 'success'
