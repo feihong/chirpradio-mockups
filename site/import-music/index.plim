@@ -11,3 +11,7 @@ title: Import new music files
 -block next
   a.btn.btn-primary.disabled.next href='../generate-traktor/'
     Next: Generate Traktor file
+
+-block note_body
+  -md
+    This page runs the `do_periodic_import --actually-do-import` command.

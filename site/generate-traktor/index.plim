@@ -8,10 +8,16 @@ title: Generate Traktor file
   -md
     This command will generate the NML file for Traktor.
 
-  .hbox
+  .hbox.progress-container
     .percent 0%
     progress value=0 max=100
 
 -block next
   a.btn.btn-primary.disabled.next href='../upload'
     Next: Upload new data to DJDB
+
+-block note_body
+  -md
+    This page runs the `do_generate_collection_nml` command.
+
+    I'm not absolutely certain that the progress of the command can be tracked by a progress bar, but if it can, then it makes sense to have a progress bar there.
