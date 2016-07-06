@@ -9,8 +9,7 @@ title: Check new music files
     This command will check new music files for errors.
 
 -block next
-  button.btn.btn-primary.show-errors(style='display:none'
-                                     data-toggle='modal'
+  button.btn.btn-primary.disabled.show-errors(data-toggle='modal'
                                      data-target='#error-modal')
     Show errors
   a.btn.btn-primary.disabled.next href='../import-music/'
