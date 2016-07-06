@@ -2,6 +2,8 @@ running = null
 completed = false
 total = 1000
 
+prog = progressDisplay('.progress-container', total)
+
 start = () ->
   running = true
 
@@ -10,9 +12,10 @@ start = () ->
   co(() ->
     for i in [1..total]
       if running
-        percent = i / total * 100
-        $('.percent').text("#{percent.toFixed(0)}%")
-        $('progress').val(percent)
+        # percent = i / total * 100
+        # $('.percent').text("#{percent.toFixed(0)}%")
+        # $('progress').val(percent)
+        prog.setValue i
         pinfo "Track #{i}"
         yield sleep 0.005
       else

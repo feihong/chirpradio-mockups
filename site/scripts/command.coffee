@@ -48,3 +48,26 @@ window.phigh = (text) ->
 
 window.psuccess = (text) ->
   plog text, 'success'
+
+
+window.progressDisplay = (container, max) ->
+  newValue = null
+  running = false
+  percDiv = $(container).find('.percent')
+  barDiv = $(container).find('progress')
+
+  setValue = (val) ->
+    newValue = val / max * 100
+
+    if not running
+      co(() ->
+        running = true
+        while newValue != null
+          percDiv.text "#{newValue.toFixed(0)}%"
+          barDiv.val newValue
+          newValue = null
+          yield sleep 0.5
+        running = false
+      )
+
+  return {setValue: setValue}

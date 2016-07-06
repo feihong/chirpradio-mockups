@@ -10,7 +10,7 @@ title: Generate Traktor file
 
   .hbox.progress-container
     .percent 0%
-    progress value=0 max=100
+    progress value=0 min=0 max=100
 
 -block next
   a.btn.btn-primary.disabled.next href='../upload'
