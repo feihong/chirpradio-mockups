@@ -9,5 +9,13 @@ title: Update artist whitelist
     This command will update the [artist whitelist file](https://github.com/chirpradio/chirpradio-machine/blob/master/chirp/library/data/artist-whitelist).
 
 -block next
-  a.btn.btn-primary.disabled.next href='../check-music'
+  a.btn.btn-primary.disabled.next href='../check-music/'
     Next: Check new music files
+
+-block note_body
+  -md
+    This page runs the `do_dump_new_artists_in_dropbox --rewrite` command.
+
+    Here, we simulate what happens when an error occurs. An explosion sound will play, followed by a spoken reading of the error message.
+
+    After you fix the problem, you can re-run the command by pressing the **Start** button or just refreshing the page.

@@ -13,5 +13,9 @@ title: Check new music files
                                      data-toggle='modal'
                                      data-target='#error-modal')
     Show errors
-  a.btn.btn-primary.disabled.next href='../import-music'
+  a.btn.btn-primary.disabled.next href='../import-music/'
     Next: Import new music files
+
+-block note_body
+  -md
+    This page runs the `do_periodic_import` command. It keeps running even when it encounters errors. Error messages are highlighted in red inside the console. You can view just the error messages by pressing the **Show errors** button.

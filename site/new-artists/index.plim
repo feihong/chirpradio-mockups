@@ -8,5 +8,11 @@ title: See new artists
   p This command will show you what artists are (supposedly) not yet in the database.
 
 -block next
-  a.btn.btn-primary.disabled.next href='../update-artist-whitelist'
+  a.btn.btn-primary.disabled.next href='../update-artist-whitelist/'
     Next: Update artist whitelist
+
+-block note_body
+  -md
+    This page is supposed to show the messages from the `do_dump_new_artists_in_dropbox` command. Even if you close the page, the command will continue to run on the server until it finishes processing. The only way to stop the command prematurely is to press the **Stop** button.
+
+    Note that when the command finishes, a sound will play and a voice will notify you of how many new artists were found. You will only hear the voice if you enabled the Web Speech API in your browser.
