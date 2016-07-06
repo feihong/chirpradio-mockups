@@ -1,0 +1,16 @@
+title: Upload new data to DJDB
+
+===
+
+-inherit command.plim
+
+-block desc
+  -md
+    This command will upload track metadata to [DJDB](https://chirpradio.appspot.com/).
+
+-block next
+  div
+
+-block note_body
+  -md
+    This page runs the `do_push_to_chirpradio --start-at=CURRENT_DATE_TIME` command.
