@@ -1,17 +1,21 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><title>Generate Traktor file</title>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/><link rel="stylesheet" href="/chirpradio-mockups/styles/command.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/><link rel="stylesheet" href="/chirpradio-mockups/styles/global.css"><link rel="stylesheet" href="/chirpradio-mockups/styles/command.css">
 </head><body class="container">
 
 <header><ol class="breadcrumb"><li><a href="/chirpradio-mockups/">Home</a></li><li class="active">Generate Traktor file</li></ol><h1>Generate Traktor file</h1>
-<p>This command will generate the NML file for Traktor.</p><div class="hbox"><div class="percent">0%</div><progress value="0" max="100"></progress></div>
+<p>This command will generate the NML file for Traktor.</p><div class="hbox progress-container"><div class="percent">0%</div><progress value="0" min="0" max="100"></progress></div>
 <div class="hbox"><button class="btn btn-primary disabled start">Start</button><button class="btn btn-primary stop">Stop</button><div class="spacer"></div>
-<a href="../upload" class="btn btn-primary disabled next">Next: Upload new data to DJDB</a>
-</div></header><main class="console"></main><div id="error-modal" class="modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button data-dismiss="modal" class="close">&times;</button><h4 class="modal-title">Errors</h4></div><div class="modal-body"><ul class="errors"></ul></div><div class="modal-footer"><button data-dismiss="modal" class="btn btn-default">Close</button></div></div></div></div>
+<a href="../upload/" class="btn btn-primary disabled next">Next: Upload new data to DJDB</a>
+</div></header><main class="console"></main><div id="error-modal" class="modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button data-dismiss="modal" class="close">&times;</button><h4 class="modal-title">Errors</h4></div><div class="modal-body"><ul class="errors"></ul></div><div class="modal-footer"><button data-dismiss="modal" class="btn btn-default">Close</button></div></div></div></div><svg viewBox="0 0 1 1" style="display: none" data-toggle="modal" data-target="#note-modal" id="corner-note"><polygon points="0,0 1,0 1,1"></polygon></svg><div id="note-modal" class="modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button data-dismiss="modal" class="close">&times;</button><h4 class="modal-title">Notes</h4></div><div class="modal-body">
+<p>This page runs the <code>do_generate_collection_nml</code> command.</p>
+
+<p>I'm not absolutely certain that the progress of this particular command can be tracked by a progress bar, but if it can, then it makes sense to have a progress bar here.</p>
+</div><div class="modal-footer"><button data-dismiss="modal" class="btn btn-default">Close</button></div></div></div></div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
 </script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/co/4.1.0/index.min.js">
+</script><script src="/chirpradio-mockups/scripts/global.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/co/4.1.0/index.min.js">
 </script><script src="/chirpradio-mockups/scripts/jsfx.js">
 </script><script src="/chirpradio-mockups/scripts/sfxlib.js">
 </script><script src="/chirpradio-mockups/scripts/command.js"></script><script src="main.js"></script>

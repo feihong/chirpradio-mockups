@@ -1,18 +1,14 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><title>Update artist whitelist</title>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><title>Upload new data to DJDB</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/><link rel="stylesheet" href="/chirpradio-mockups/styles/global.css"><link rel="stylesheet" href="/chirpradio-mockups/styles/command.css">
 </head><body class="container">
 
-<header><ol class="breadcrumb"><li><a href="/chirpradio-mockups/">Home</a></li><li class="active">Update artist whitelist</li></ol><h1>Update artist whitelist</h1>
-<p>This command will update the <a href="https://github.com/chirpradio/chirpradio-machine/blob/master/chirp/library/data/artist-whitelist">artist whitelist file</a>.</p>
+<header><ol class="breadcrumb"><li><a href="/chirpradio-mockups/">Home</a></li><li class="active">Upload new data to DJDB</li></ol><h1>Upload new data to DJDB</h1>
+<p>This command will upload track metadata to <a href="https://chirpradio.appspot.com/">DJDB</a>.</p>
 <div class="hbox"><button class="btn btn-primary disabled start">Start</button><button class="btn btn-primary stop">Stop</button><div class="spacer"></div>
-<a href="../check-music/" class="btn btn-primary disabled next">Next: Check new music files</a>
+<div></div>
 </div></header><main class="console"></main><div id="error-modal" class="modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button data-dismiss="modal" class="close">&times;</button><h4 class="modal-title">Errors</h4></div><div class="modal-body"><ul class="errors"></ul></div><div class="modal-footer"><button data-dismiss="modal" class="btn btn-default">Close</button></div></div></div></div><svg viewBox="0 0 1 1" style="display: none" data-toggle="modal" data-target="#note-modal" id="corner-note"><polygon points="0,0 1,0 1,1"></polygon></svg><div id="note-modal" class="modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button data-dismiss="modal" class="close">&times;</button><h4 class="modal-title">Notes</h4></div><div class="modal-body">
-<p>This page runs the <code>do_dump_new_artists_in_dropbox --rewrite</code> command.</p>
-
-<p>Here, we simulate what happens when an error occurs. An explosion sound will play, followed by a spoken reading of the error message.</p>
-
-<p>After you fix the problem, you can re-run the command by pressing the <strong>Start</strong> button or just refreshing the page.</p>
+<p>This page runs the <code>do_push_to_chirpradio --start-at=CURRENT_DATE_TIME</code> command.</p>
 </div><div class="modal-footer"><button data-dismiss="modal" class="btn btn-default">Close</button></div></div></div></div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">

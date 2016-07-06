@@ -55,4 +55,30 @@
     return plog(text, 'success');
   };
 
+  window.progressDisplay = function(container, max) {
+    var barDiv, newValue, percDiv, running, setValue;
+    newValue = null;
+    running = false;
+    percDiv = $(container).find('.percent');
+    barDiv = $(container).find('progress');
+    setValue = function(val) {
+      newValue = val / max * 100;
+      if (!running) {
+        return co(function*() {
+          running = true;
+          while (newValue !== null) {
+            percDiv.text((newValue.toFixed(0)) + "%");
+            barDiv.val(newValue);
+            newValue = null;
+            (yield sleep(0.5));
+          }
+          return running = false;
+        });
+      }
+    };
+    return {
+      setValue: setValue
+    };
+  };
+
 }).call(this);

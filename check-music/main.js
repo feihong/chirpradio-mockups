@@ -17,7 +17,7 @@
             trackMsg = "Track " + j + " - something blew up";
             perr(trackMsg);
             errorCount += 1;
-            $('.show-errors').show().text("Show errors (" + errorCount + ")");
+            $('.show-errors').removeClass('disabled').text("Show errors (" + errorCount + ")");
             $('<li>').text(albumMsg + ": " + trackMsg).appendTo('.errors');
             playSound('error');
           } else {

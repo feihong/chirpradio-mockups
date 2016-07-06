@@ -1,0 +1,13 @@
+#corner-note {
+  width: 2em;
+  height: 2em;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+#corner-note polygon {
+  cursor: pointer;
+}
+#corner-note polygon:hover {
+  fill: #4682b4;
+}

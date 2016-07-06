@@ -42,6 +42,10 @@ header button {
 header .hbox {
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+header .progress-container {
+  margin-bottom: 1em;
 }
 header div.spacer {
   flex: 1;
