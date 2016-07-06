@@ -10,6 +10,9 @@ button_pairs:
 
 -inherit base.plim
 
+-block note_body
+  p Clicking on any of the buttons launches the corresponding command and shows you real-time messages from the command in a mock console.
+
 h1 = title
 
 p Welcome! What would you like to do?
