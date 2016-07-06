@@ -12,8 +12,24 @@ html lang='en'
   body.container
     = next.body()
 
-    svg.corner-note viewBox='0 0 1 1' style='display: none'
+    svg#corner-note(viewBox='0 0 1 1'
+                    style='display: none'
+                    data-toggle='modal'
+                    data-target='#note-modal')
       polygon points='0,0 1,0 1,1'
+
+    #note-modal.modal class='fade'
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close data-dismiss='modal' &times;
+            h4.modal-title Notes
+          .modal-body
+            -block note_body
+              This is the body of the note
+          .modal-footer
+            button.btn.btn-default data-dismiss='modal' Close
+
 
     -block scripts
       script src='https://code.jquery.com/jquery-2.2.4.min.js' integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=' crossorigin='anonymous'
