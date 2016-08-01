@@ -1,5 +1,7 @@
 # CHIRP Radio Mockups
 
+Published to http://feihong.github.io/chirpradio-mockups/
+
 ## Commands
 
 | **Command** | **Description** |
